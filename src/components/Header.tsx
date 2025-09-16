@@ -49,8 +49,8 @@ export const Header: React.FC = () => {
             <div className="flex items-center">
               <img 
                 src={logoImage} 
-                alt="Dharmafoods USA" 
-                className="h-10 w-auto"
+                alt="Dharmafoods USA - Integrity, Fairness, Respect, Love" 
+                className="h-12 w-auto"
                 onError={(e) => {
                   // Fallback to text logo if image fails to load
                   e.currentTarget.style.display = 'none';
