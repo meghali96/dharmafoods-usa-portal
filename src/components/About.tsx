@@ -22,14 +22,6 @@ export const About: React.FC = () => {
     }
   ];
 
-  const values = [
-    "Authentic traditional recipes",
-    "Premium quality ingredients",
-    "Reliable distribution network",
-    "Exceptional customer service",
-    "Competitive wholesale pricing",
-    "Fresh product guarantee"
-  ];
 
   return (
     <section id="about" className="py-20 bg-muted/30">
@@ -109,20 +101,6 @@ export const About: React.FC = () => {
               ))}
             </div>
 
-            {/* Values */}
-            <div className="space-y-4">
-              <h3 className="text-xl font-heading font-semibold text-foreground">
-                Why Choose Us?
-              </h3>
-              <div className="grid sm:grid-cols-2 gap-3">
-                {values.map((value, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-secondary flex-shrink-0" />
-                    <span className="text-foreground font-medium">{value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
       </div>

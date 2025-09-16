@@ -10,35 +10,35 @@ export const ServiceAreas: React.FC = () => {
       abbreviation: "GA",
       cities: ["Atlanta", "Augusta", "Columbus", "Savannah", "Macon"],
       deliveryTime: "1-2 days",
-      color: "bg-primary"
+      color: "bg-gradient-states"
     },
     {
       name: "Florida",
       abbreviation: "FL", 
       cities: ["Jacksonville", "Miami", "Tampa", "Orlando", "Tallahassee"],
       deliveryTime: "2-3 days",
-      color: "bg-secondary"
+      color: "bg-gradient-states"
     },
     {
       name: "South Carolina",
       abbreviation: "SC",
       cities: ["Charleston", "Columbia", "Greenville", "Spartanburg", "Rock Hill"],
       deliveryTime: "1-2 days",
-      color: "bg-accent/80"
+      color: "bg-gradient-states"
     },
     {
       name: "Tennessee",
       abbreviation: "TN",
       cities: ["Nashville", "Memphis", "Knoxville", "Chattanooga", "Clarksville"],
       deliveryTime: "2-3 days", 
-      color: "bg-primary/80"
+      color: "bg-gradient-states"
     },
     {
       name: "Alabama",
       abbreviation: "AL",
       cities: ["Birmingham", "Montgomery", "Mobile", "Huntsville", "Tuscaloosa"],
       deliveryTime: "1-3 days",
-      color: "bg-secondary/80"
+      color: "bg-gradient-states"
     }
   ];
 
@@ -74,7 +74,7 @@ export const ServiceAreas: React.FC = () => {
             Service Coverage
           </Badge>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold bg-gradient-states bg-clip-text text-transparent mb-6">
             Serving 5 States Across the Southeast
           </h2>
           
@@ -175,9 +175,9 @@ export const ServiceAreas: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {serviceFeatures.map((feature, index) => (
               <div key={index} className="text-center space-y-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <feature.icon className="w-8 h-8 text-primary" />
-                </div>
+                 <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto">
+                   <feature.icon className="w-8 h-8 text-secondary" />
+                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-lg text-foreground mb-2">
                     {feature.title}

@@ -42,11 +42,13 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <img 
-                src={logoImage} 
-                alt="Dharmafoods USA - Integrity, Fairness, Respect, Love" 
-                className="h-16 w-auto mb-3"
-              />
+              <div className="bg-white p-2 rounded-lg inline-block mb-3">
+                <img 
+                  src={logoImage} 
+                  alt="Dharmafoods USA - Integrity, Fairness, Respect, Love" 
+                  className="h-12 w-auto"
+                />
+              </div>
               <p className="text-white/80 leading-relaxed">
                 Official distributor of Swetha Telugu Foods, bringing authentic 
                 traditional flavors to businesses across the Southeast.
