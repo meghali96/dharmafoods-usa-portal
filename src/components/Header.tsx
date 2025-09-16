@@ -82,7 +82,7 @@ export const Header: React.FC = () => {
             <div className="hidden lg:flex">
               <Button
                 onClick={() => setIsEnquiryModalOpen(true)}
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-6 py-2 h-12 shadow-accent transition-smooth hover:shadow-accent/60 hover:scale-105"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-2 h-12 shadow-accent transition-smooth hover:shadow-accent/60 hover:scale-105 min-w-[120px]"
               >
                 Enquiry
               </Button>

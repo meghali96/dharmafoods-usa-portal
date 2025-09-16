@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import logoImage from '@/assets/dharmafoods-logo.png';
 
 export const Footer: React.FC = () => {
   const quickLinks = [
@@ -41,9 +42,11 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-heading font-bold mb-3">
-                Dharmafoods USA
-              </h3>
+              <img 
+                src={logoImage} 
+                alt="Dharmafoods USA - Integrity, Fairness, Respect, Love" 
+                className="h-16 w-auto mb-3"
+              />
               <p className="text-white/80 leading-relaxed">
                 Official distributor of Swetha Telugu Foods, bringing authentic 
                 traditional flavors to businesses across the Southeast.
