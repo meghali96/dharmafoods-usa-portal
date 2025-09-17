@@ -83,10 +83,10 @@ export const Contact: React.FC = () => {
               {contactInfo.map((info, index) => (
                 <Card key={index} className="group hover:shadow-card transition-smooth border-border/50 hover:border-primary/20">
                   <CardContent className="p-6">
-                    <div className="flex items-start space-x-4">
-                      <div className="flex-shrink-0 w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <info.icon className="w-6 h-6 text-primary" />
-                      </div>
+                      <div className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 w-12 h-12 icon-container-blend rounded-lg flex items-center justify-center transition-smooth">
+                          <info.icon className="w-6 h-6 icon-blend-primary" />
+                        </div>
                       <div className="flex-1">
                         <h3 className="font-heading font-semibold text-lg text-foreground mb-2">
                           {info.title}
@@ -172,7 +172,7 @@ export const Contact: React.FC = () => {
                     }}
                   >
                     <div className="flex items-center space-x-3 text-left">
-                      <action.icon className="w-6 h-6 flex-shrink-0" />
+                      <action.icon className="w-6 h-6 flex-shrink-0 icon-blend-secondary" />
                       <div>
                         <div className="font-semibold">{action.title}</div>
                         <div className="text-sm opacity-90">

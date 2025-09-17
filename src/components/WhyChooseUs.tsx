@@ -58,8 +58,8 @@ export const WhyChooseUs: React.FC = () => {
           {reasons.map((reason, index) => (
             <div key={index} className="group p-6 rounded-xl bg-card border border-border/50 hover:border-secondary/30 hover:shadow-card transition-smooth">
               <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0 w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center group-hover:bg-secondary/20 transition-smooth">
-                  <reason.icon className="w-6 h-6 text-secondary" />
+                <div className="flex-shrink-0 w-12 h-12 icon-container-blend rounded-lg flex items-center justify-center group-hover:icon-container-blend transition-smooth">
+                  <reason.icon className="w-6 h-6 icon-blend-secondary" />
                 </div>
                 <div>
                   <h3 className="font-heading font-semibold text-lg text-foreground mb-2">

@@ -187,6 +187,52 @@ All colors MUST be HSL.
     transition: var(--transition-bounce);
   }
   
+  /* Icon utilities with blended brand colors */
+  .icon-blend-primary {
+    background: linear-gradient(135deg, hsl(var(--brand-secondary)) 0%, hsl(var(--brand-accent)) 50%, hsl(var(--brand-primary)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 2px hsl(var(--brand-primary) / 0.1));
+  }
+  
+  .icon-blend-secondary {
+    background: linear-gradient(135deg, hsl(var(--brand-accent)) 0%, hsl(var(--brand-secondary)) 70%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 2px hsl(var(--brand-secondary) / 0.2));
+  }
+  
+  .icon-blend-accent {
+    background: linear-gradient(135deg, hsl(var(--brand-secondary)) 0%, hsl(var(--brand-accent)) 50%, hsl(var(--brand-primary)) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px hsl(var(--brand-accent) / 0.3));
+  }
+  
+  .icon-container-blend {
+    background: linear-gradient(135deg, hsl(var(--brand-secondary) / 0.1) 0%, hsl(var(--brand-accent) / 0.05) 50%, hsl(var(--brand-primary) / 0.1) 100%);
+    border: 1px solid hsl(var(--brand-secondary) / 0.2);
+  }
+  
+  .icon-container-blend:hover {
+    background: linear-gradient(135deg, hsl(var(--brand-secondary) / 0.15) 0%, hsl(var(--brand-accent) / 0.1) 50%, hsl(var(--brand-primary) / 0.15) 100%);
+    border-color: hsl(var(--brand-accent) / 0.3);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px hsl(var(--brand-primary) / 0.1);
+  }
+  
+  /* Replace yellow lines with green */
+  .border-accent {
+    border-color: hsl(var(--brand-secondary));
+  }
+  
+  .bg-accent\/5 {
+    background-color: hsl(var(--brand-secondary) / 0.05);
+  }
+  
   /* Typography utilities */
   .font-heading {
     font-family: var(--font-heading);
