@@ -86,8 +86,8 @@ export const About: React.FC = () => {
             <div className="grid gap-6">
               {highlights.map((highlight, index) => (
                 <div key={index} className="flex items-start space-x-4 p-4 rounded-lg bg-card border border-border/50 hover:border-primary/20 transition-smooth">
-                  <div className="flex-shrink-0 w-12 h-12 icon-container-blend rounded-lg flex items-center justify-center transition-smooth">
-                    <highlight.icon className="w-6 h-6 icon-blend-primary" />
+                  <div className="flex-shrink-0 w-12 h-12 icon-container-3d rounded-lg flex items-center justify-center transition-smooth">
+                    <highlight.icon className="w-6 h-6 icon-3d-primary" />
                   </div>
                   <div>
                     <h3 className="font-heading font-semibold text-lg text-foreground mb-1">

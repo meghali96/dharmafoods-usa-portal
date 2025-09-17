@@ -187,42 +187,127 @@ All colors MUST be HSL.
     transition: var(--transition-bounce);
   }
   
-  /* Icon utilities with blended brand colors */
-  .icon-blend-primary {
-    background: radial-gradient(circle at 30% 30%, hsl(var(--brand-accent)) 0%, hsl(var(--brand-secondary)) 30%, hsl(var(--brand-primary)) 70%);
+  /* 3D Icon Animations & Effects */
+  @keyframes float3d {
+    0%, 100% { transform: perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0px); }
+    25% { transform: perspective(800px) rotateX(5deg) rotateY(5deg) translateZ(10px); }
+    50% { transform: perspective(800px) rotateX(0deg) rotateY(10deg) translateZ(15px); }
+    75% { transform: perspective(800px) rotateX(-5deg) rotateY(5deg) translateZ(10px); }
+  }
+
+  @keyframes pulse3d {
+    0%, 100% { transform: perspective(800px) rotateY(0deg) scale(1) translateZ(0px); }
+    50% { transform: perspective(800px) rotateY(180deg) scale(1.1) translateZ(20px); }
+  }
+
+  @keyframes glow3d {
+    0%, 100% { 
+      filter: drop-shadow(0 0 5px hsl(var(--brand-primary) / 0.4)) drop-shadow(0 0 10px hsl(var(--brand-secondary) / 0.3)) drop-shadow(0 0 15px hsl(var(--brand-accent) / 0.2));
+    }
+    50% { 
+      filter: drop-shadow(0 0 15px hsl(var(--brand-primary) / 0.6)) drop-shadow(0 0 25px hsl(var(--brand-secondary) / 0.5)) drop-shadow(0 0 35px hsl(var(--brand-accent) / 0.4));
+    }
+  }
+
+  .icon-3d-primary {
+    background: conic-gradient(from 45deg at 50% 50%, 
+      hsl(var(--brand-primary)) 0deg, 
+      hsl(var(--brand-secondary)) 72deg, 
+      hsl(var(--brand-accent)) 144deg, 
+      hsl(var(--brand-primary)) 216deg, 
+      hsl(var(--brand-secondary)) 288deg, 
+      hsl(var(--brand-accent)) 360deg);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 4px hsl(var(--brand-primary) / 0.15)) drop-shadow(0 1px 2px hsl(var(--brand-accent) / 0.1));
+    animation: float3d 4s ease-in-out infinite, glow3d 3s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .icon-blend-secondary {
-    background: radial-gradient(circle at 40% 40%, hsl(var(--brand-accent)) 0%, hsl(var(--brand-secondary)) 50%, hsl(var(--brand-primary)) 90%);
+
+  .icon-3d-primary:hover {
+    animation: pulse3d 1.5s ease-in-out infinite, glow3d 1s ease-in-out infinite;
+    transform: perspective(800px) rotateY(15deg) rotateX(10deg) scale(1.2) translateZ(25px);
+  }
+
+  .icon-3d-secondary {
+    background: conic-gradient(from 0deg at 30% 70%, 
+      hsl(var(--brand-secondary)) 0deg, 
+      hsl(var(--brand-accent)) 90deg, 
+      hsl(var(--brand-primary)) 180deg, 
+      hsl(var(--brand-secondary)) 270deg, 
+      hsl(var(--brand-accent)) 360deg);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 3px hsl(var(--brand-secondary) / 0.2)) drop-shadow(0 1px 1px hsl(var(--brand-accent) / 0.15));
+    animation: float3d 5s ease-in-out infinite reverse, glow3d 4s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .icon-blend-accent {
-    background: radial-gradient(circle at 35% 35%, hsl(var(--brand-secondary)) 0%, hsl(var(--brand-accent)) 40%, hsl(var(--brand-primary)) 85%);
+
+  .icon-3d-secondary:hover {
+    animation: pulse3d 1.2s ease-in-out infinite, glow3d 0.8s ease-in-out infinite;
+    transform: perspective(800px) rotateY(-15deg) rotateX(10deg) scale(1.25) translateZ(30px);
+  }
+
+  .icon-3d-accent {
+    background: conic-gradient(from 90deg at 70% 30%, 
+      hsl(var(--brand-accent)) 0deg, 
+      hsl(var(--brand-primary)) 120deg, 
+      hsl(var(--brand-secondary)) 240deg, 
+      hsl(var(--brand-accent)) 360deg);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 4px hsl(var(--brand-accent) / 0.25)) drop-shadow(0 1px 2px hsl(var(--brand-secondary) / 0.1));
+    animation: float3d 3.5s ease-in-out infinite, glow3d 2.5s ease-in-out infinite;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  
-  .icon-container-blend {
-    background: radial-gradient(circle at 30% 30%, hsl(var(--brand-secondary) / 0.08) 0%, hsl(var(--brand-accent) / 0.04) 30%, hsl(var(--brand-primary) / 0.08) 70%, transparent 100%);
-    border: 1px solid hsl(var(--brand-secondary) / 0.15);
-    backdrop-filter: blur(8px);
+
+  .icon-3d-accent:hover {
+    animation: pulse3d 1.8s ease-in-out infinite, glow3d 1.2s ease-in-out infinite;
+    transform: perspective(800px) rotateY(20deg) rotateX(-10deg) scale(1.15) translateZ(35px);
   }
-  
-  .icon-container-blend:hover {
-    background: radial-gradient(circle at 30% 30%, hsl(var(--brand-secondary) / 0.12) 0%, hsl(var(--brand-accent) / 0.08) 30%, hsl(var(--brand-primary) / 0.12) 70%, transparent 100%);
-    border-color: hsl(var(--brand-accent) / 0.25);
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 8px 25px hsl(var(--brand-primary) / 0.15), 0 3px 10px hsl(var(--brand-accent) / 0.1);
+
+  .icon-container-3d {
+    background: linear-gradient(135deg, 
+      hsl(var(--brand-primary) / 0.15) 0%, 
+      hsl(var(--brand-secondary) / 0.12) 35%, 
+      hsl(var(--brand-accent) / 0.1) 70%, 
+      hsl(var(--brand-primary) / 0.08) 100%);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .icon-container-3d::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from 0deg, 
+      hsl(var(--brand-primary)) 0deg, 
+      hsl(var(--brand-secondary)) 120deg, 
+      hsl(var(--brand-accent)) 240deg, 
+      hsl(var(--brand-primary)) 360deg);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: float3d 6s ease-in-out infinite;
+  }
+
+  .icon-container-3d:hover {
+    transform: perspective(800px) rotateY(10deg) rotateX(5deg) translateZ(15px);
+    box-shadow: 
+      0 20px 40px hsl(var(--brand-primary) / 0.2),
+      0 10px 20px hsl(var(--brand-secondary) / 0.15),
+      0 5px 10px hsl(var(--brand-accent) / 0.1);
+  }
+
+  .icon-container-3d:hover::before {
+    animation: pulse3d 2s ease-in-out infinite;
   }
   
   /* Replace yellow lines with green */

@@ -84,8 +84,8 @@ export const Contact: React.FC = () => {
                 <Card key={index} className="group hover:shadow-card transition-smooth border-border/50 hover:border-primary/20">
                   <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 w-12 h-12 icon-container-blend rounded-lg flex items-center justify-center transition-smooth">
-                          <info.icon className="w-6 h-6 icon-blend-primary" />
+                        <div className="flex-shrink-0 w-12 h-12 icon-container-3d rounded-lg flex items-center justify-center transition-smooth">
+                          <info.icon className="w-6 h-6 icon-3d-primary" />
                         </div>
                       <div className="flex-1">
                         <h3 className="font-heading font-semibold text-lg text-foreground mb-2">

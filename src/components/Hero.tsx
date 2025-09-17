@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
             <div className="grid sm:grid-cols-3 gap-4">
               {features.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
-                  <feature.icon className="w-6 h-6 icon-blend-accent flex-shrink-0" />
+                  <feature.icon className="w-6 h-6 icon-3d-accent flex-shrink-0" />
                   <span className="text-sm font-medium text-white">
                     {feature.text}
                   </span>

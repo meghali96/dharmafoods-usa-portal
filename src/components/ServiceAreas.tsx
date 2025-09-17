@@ -175,8 +175,8 @@ export const ServiceAreas: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {serviceFeatures.map((feature, index) => (
               <div key={index} className="text-center space-y-4">
-                 <div className="w-16 h-16 icon-container-blend rounded-full flex items-center justify-center mx-auto transition-smooth">
-                   <feature.icon className="w-8 h-8 icon-blend-secondary" />
+                 <div className="w-16 h-16 icon-container-3d rounded-full flex items-center justify-center mx-auto transition-smooth">
+                   <feature.icon className="w-8 h-8 icon-3d-secondary" />
                  </div>
                 <div>
                   <h4 className="font-heading font-semibold text-lg text-foreground mb-2">
