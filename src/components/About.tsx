@@ -75,7 +75,7 @@ export const About: React.FC = () => {
               </h2>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
-                As the official distributor of Swetha Telugu Foods, we take pride in bringing the 
+                As the official distributor of <span className="text-secondary font-semibold">Swetha Telugu Foods</span>, we take pride in bringing the 
                 authentic flavors of traditional Telugu cuisine to businesses across the Southeast. 
                 Our commitment to quality and reliability has made us the preferred choice for 
                 restaurants, grocery stores, and food service providers.

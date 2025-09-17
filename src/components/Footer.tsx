@@ -50,7 +50,7 @@ export const Footer: React.FC = () => {
                 />
               </div>
               <p className="text-white/80 leading-relaxed">
-                Official distributor of Swetha Telugu Foods, bringing authentic 
+                Official distributor of <span className="text-accent font-semibold">Swetha Telugu Foods</span>, bringing authentic 
                 traditional flavors to businesses across the Southeast.
               </p>
             </div>
@@ -146,7 +146,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-white/80">
               © {new Date().getFullYear()} Dharmafoods USA. All rights reserved. 
-              Official distributor of Swetha Telugu Foods.
+              Official distributor of <span className="text-accent font-semibold">Swetha Telugu Foods</span>.
             </div>
             
             <div className="flex space-x-6 text-sm">

@@ -47,7 +47,7 @@ export const Hero: React.FC = () => {
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
                 Official Distributor of{' '}
-                <span className="text-accent">
+                <span className="text-secondary font-bold">
                   Swetha Telugu Foods
                 </span>
               </h1>
@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
               <Button
                 onClick={handleCTAClick}
                 size="lg"
-                className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-4 h-14 shadow-accent hover:shadow-accent/60 transition-smooth group"
+                className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold text-lg px-8 py-4 h-14 shadow-lg hover:shadow-xl transition-smooth group"
               >
                 Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />

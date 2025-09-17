@@ -75,9 +75,9 @@ export const Products: React.FC = () => {
             Our Product Range
           </Badge>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
-            Authentic Swetha Telugu Foods
-          </h2>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-primary mb-6">
+              Authentic <span className="text-secondary">Swetha Telugu Foods</span>
+            </h2>
           
           <p className="text-lg text-muted-foreground leading-relaxed">
             Discover our comprehensive range of traditional Telugu foods, carefully selected and 
